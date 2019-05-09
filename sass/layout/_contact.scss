@@ -13,6 +13,7 @@
   background-attachment: fixed;
 
   &__left {
+    opacity: 0;
     background-color: $light;
     margin: 5rem;
     border-radius: 4px;
@@ -66,6 +67,7 @@
   }
 
   &__right {
+    opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;

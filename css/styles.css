@@ -28,6 +28,22 @@
     opacity: 1;
     transform: translateX(0); } }
 
+.fadeIn {
+  animation: fadeIn 1.5s linear 0.5s;
+  animation-fill-mode: forwards; }
+
+.fadeInLeft {
+  animation: fadeInLeft 1.5s linear;
+  animation-fill-mode: forwards; }
+
+.fadeInRight {
+  animation: fadeInRight 1.5s linear;
+  animation-fill-mode: forwards; }
+
+.fadeInUp {
+  animation: fadeInUp 1s linear;
+  animation-fill-mode: forwards; }
+
 *,
 *::after,
 *::before {
@@ -236,22 +252,6 @@ body {
       transform: translateY(0);
       box-shadow: 0 0.2rem 0.2rem #666666; }
 
-.fadeIn {
-  animation: fadeIn 1.5s linear 0.5s;
-  animation-fill-mode: forwards; }
-
-.fadeInLeft {
-  animation: fadeInLeft 1.5s linear;
-  animation-fill-mode: forwards; }
-
-.fadeInRight {
-  animation: fadeInRight 1.5s linear;
-  animation-fill-mode: forwards; }
-
-.fadeInUp {
-  animation: fadeInUp 1s linear;
-  animation-fill-mode: forwards; }
-
 .footer {
   font-size: 1.4rem; }
   .footer__top {
@@ -299,6 +299,7 @@ body {
   background-size: cover;
   background-attachment: fixed; }
   .contact__left {
+    opacity: 0;
     background-color: #f1f1f1;
     margin: 5rem;
     border-radius: 4px;
@@ -339,6 +340,7 @@ body {
         transform: translateY(0.2rem);
         box-shadow: 0 0.1rem 0.3rem #4d4d4d; }
   .contact__right {
+    opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -31,6 +31,18 @@
     },
     offset: "35%"
   });
+  //************************ contact waypoint
+  const section_contact = new Waypoint({
+    element: document.getElementById("contact-section"),
+    handler: function(direction) {
+      if (direction == "down") {
+        console.log("fired");
+        document.querySelector(".contact__left").classList.add("fadeInLeft");
+        document.querySelector(".contact__right").classList.add("fadeIn");
+      }
+    },
+    offset: "75%"
+  });
 
   //******************** current year
   const year = new Date().getFullYear();
