@@ -22,7 +22,6 @@
     element: document.getElementById("section-about"),
     handler: function(direction) {
       if (direction == "down") {
-        console.log("fired");
         document.querySelector(".about__heading").classList.add("fadeIn");
         document.querySelector(".about__spacer").classList.add("fadeIn");
         document.querySelector(".card1").classList.add("fadeInLeft");

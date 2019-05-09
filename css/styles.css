@@ -51,7 +51,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #ffc760; }
+  color: #ffc760;
+  z-index: 100; }
   .nav--land {
     position: absolute;
     bottom: 2rem;
@@ -166,7 +167,7 @@ body {
     animation-fill-mode: forwards; }
 
 .about {
-  padding: 20rem;
+  padding: 20rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -251,18 +252,99 @@ body {
   animation: fadeInUp 1s linear;
   animation-fill-mode: forwards; }
 
-.footer__top {
-  height: 40rem; }
+.footer {
+  font-size: 1.4rem; }
+  .footer__top {
+    color: #161616;
+    background-color: #f1f1f1;
+    padding: 10rem 5rem;
+    display: flex;
+    justify-content: space-evenly; }
+    .footer__top--left > * {
+      padding: 0.2rem 0; }
+    .footer__top--left h1 {
+      margin-bottom: 1rem;
+      font-size: 3.5rem; }
+    .footer__top--right p {
+      margin-bottom: 2rem;
+      font-size: 1.8rem; }
+    .footer__top--right ul {
+      list-style: none; }
+      .footer__top--right ul li {
+        padding: 0.5rem 0;
+        font-size: 1.4rem; }
+        .footer__top--right ul li a {
+          color: #ff6600;
+          transition: all 250ms ease; }
+          .footer__top--right ul li a:hover {
+            color: #161616; }
+  .footer__bottom {
+    text-align: right;
+    background-color: #b9b9b9;
+    color: #ffee00; }
+    .footer__bottom p {
+      padding: 2rem; }
+      .footer__bottom p a {
+        color: #f1f1f1;
+        transition: all 250ms ease; }
+        .footer__bottom p a:hover {
+          color: #ff6600; }
 
-.footer__bottom {
-  text-align: right;
-  background-color: #b9b9b9;
-  color: #ffee00; }
-  .footer__bottom p {
-    padding: 2rem;
-    font-size: 1.3rem; }
-    .footer__bottom p a {
-      color: #f1f1f1;
+.contact {
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(to right top, rgba(241, 241, 241, 0.801), rgba(255, 102, 0, 0.801)), url("../img/family_coaching_solutions_contact.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+  .contact__left {
+    background-color: #f1f1f1;
+    margin: 5rem;
+    border-radius: 4px;
+    box-shadow: 0 0.3rem 2rem #161616; }
+    .contact__left--form {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 9rem 7rem 7rem 7rem;
+      font-size: 1.4rem; }
+      .contact__left--form h3 {
+        position: absolute;
+        font-size: 2.6rem;
+        color: orange;
+        text-shadow: 0.2rem 0.2rem 0.4rem black;
+        top: 3rem;
+        left: 13rem; }
+    .contact__left--input, .contact__left--textarea {
+      margin-bottom: 0.5rem;
+      border: 1px solid #b9b9b9;
+      border-radius: 4px;
+      outline: none;
+      padding: 0.5rem 1rem;
+      font-family: inherit;
+      font-size: 1.4rem; }
+    .contact__left--btn {
+      padding: 0.7rem;
+      border: none;
+      box-shadow: 0 0.3rem 0.6rem #646464;
+      background-color: #ffee00;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      font-size: 1.6rem;
+      outline: none;
       transition: all 250ms ease; }
-      .footer__bottom p a:hover {
-        color: #ff6600; }
+      .contact__left--btn:active {
+        transform: translateY(0.2rem);
+        box-shadow: 0 0.1rem 0.3rem #4d4d4d; }
+  .contact__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 3.3rem;
+    font-weight: bold; }
+    .contact__right--para {
+      padding: 4rem 6rem;
+      color: #161616;
+      font-size: 2rem; }

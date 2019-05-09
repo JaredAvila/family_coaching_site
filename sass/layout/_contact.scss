@@ -1,0 +1,80 @@
+.contact {
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(
+      to right top,
+      rgba($light, 0.801),
+      rgba($orange, 0.801)
+    ),
+    url("../img/family_coaching_solutions_contact.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &__left {
+    background-color: $light;
+    margin: 5rem;
+    border-radius: 4px;
+    box-shadow: 0 0.3rem 2rem $dark;
+
+    &--form {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 9rem 7rem 7rem 7rem;
+      font-size: 1.4rem;
+
+      h3 {
+        position: absolute;
+        font-size: 2.6rem;
+        color: orange;
+        text-shadow: 0.2rem 0.2rem 0.4rem black;
+        top: 3rem;
+        left: 13rem;
+      }
+    }
+
+    &--input,
+    &--textarea {
+      margin-bottom: 0.5rem;
+      border: 1px solid $grey;
+      border-radius: 4px;
+      outline: none;
+      padding: 0.5rem 1rem;
+      font-family: inherit;
+      font-size: 1.4rem;
+    }
+
+    &--btn {
+      padding: 0.7rem;
+      border: none;
+      box-shadow: 0 0.3rem 0.6rem rgb(100, 100, 100);
+      background-color: $yellow;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      font-size: 1.6rem;
+      outline: none;
+      transition: $transition-default;
+
+      &:active {
+        transform: translateY(0.2rem);
+        box-shadow: 0 0.1rem 0.3rem rgb(77, 77, 77);
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 3.3rem;
+    font-weight: bold;
+    &--para {
+      padding: 4rem 6rem;
+      color: $dark;
+      font-size: 2rem;
+    }
+  }
+}

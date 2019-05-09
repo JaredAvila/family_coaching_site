@@ -1,6 +1,47 @@
 .footer {
+  font-size: 1.4rem;
   &__top {
-    height: 40rem;
+    color: $dark;
+    background-color: $light;
+    padding: 10rem 5rem;
+    display: flex;
+    justify-content: space-evenly;
+
+    &--left {
+      & > * {
+        padding: 0.2rem 0;
+      }
+
+      h1 {
+        margin-bottom: 1rem;
+        font-size: 3.5rem;
+      }
+    }
+
+    &--right {
+      p {
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          padding: 0.5rem 0;
+          font-size: 1.4rem;
+
+          a {
+            color: $orange;
+            transition: $transition-default;
+
+            &:hover {
+              color: $dark;
+            }
+          }
+        }
+      }
+    }
   }
 
   &__bottom {
@@ -9,7 +50,6 @@
     color: $yellow;
     p {
       padding: 2rem;
-      font-size: 1.3rem;
 
       a {
         color: $light;
