@@ -1,0 +1,74 @@
+.nav {
+  position: absolute;
+  bottom: 2rem;
+  right: 7rem;
+
+  &__left {
+    &--title {
+      visibility: hidden;
+    }
+  }
+
+  &__right {
+    &--list {
+      padding: 2rem 0;
+    }
+
+    &--listItem {
+      display: inline-block;
+      color: $orange;
+      font-size: 2.3rem;
+      padding: 2rem;
+      border-radius: 0.2rem;
+      transition: $transition-default;
+
+      &:hover {
+        background-color: rgba(white, 0.3);
+      }
+    }
+
+    &--link {
+      list-style: none;
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+//intro animations
+
+.nav-home {
+  opacity: 0;
+  animation: fadeIn 250ms linear 3s;
+  animation-fill-mode: forwards;
+}
+
+.nav-about {
+  opacity: 0;
+  animation: fadeIn 250ms linear 3.2s;
+  animation-fill-mode: forwards;
+}
+
+.nav-services {
+  opacity: 0;
+  animation: fadeIn 250ms linear 3.4s;
+  animation-fill-mode: forwards;
+}
+
+.nav-resources {
+  opacity: 0;
+  animation: fadeIn 250ms linear 3.6s;
+  animation-fill-mode: forwards;
+}
+
+.nav-blog {
+  opacity: 0;
+  animation: fadeIn 250ms linear 3.8s;
+  animation-fill-mode: forwards;
+}
+
+.nav-contact {
+  opacity: 0;
+  animation: fadeIn 250ms linear 4s;
+  animation-fill-mode: forwards;
+}

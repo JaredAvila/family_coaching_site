@@ -1,0 +1,14 @@
+{
+  "name": "family_coaching_solutions",
+  "version": "1.0.0",
+  "description": "webpage for Jay Harnden of Family Coaching Solutions",
+  "main": "script.js",
+  "scripts": {
+    "compile-sass": "node-sass sass/main.scss css/styles.css -w"
+  },
+  "author": "Jared C Avila",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
