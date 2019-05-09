@@ -1,0 +1,120 @@
+.about {
+  padding: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+
+  &__heading {
+    font-size: 4rem;
+    font-weight: 200;
+    margin-bottom: 5rem;
+    opacity: 0;
+  }
+
+  &__spacer {
+    border-bottom: 2px solid $orange;
+    width: 10rem;
+    margin-bottom: 10rem;
+    opacity: 0;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--card {
+      opacity: 0;
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        color: $orange;
+      }
+
+      i {
+        font-size: 5rem;
+        padding: 2rem;
+        color: $dark;
+      }
+
+      p {
+        font-size: 1.4rem;
+        line-height: 2.3rem;
+      }
+
+      i,
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+
+  &__sched {
+    padding: 4rem 0;
+    margin-top: 6rem;
+    color: $orange;
+    font-size: 2.6rem;
+  }
+
+  &__btn {
+    position: relative;
+    padding: 1rem 5rem 1rem 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 2rem;
+    background-color: $yellow;
+    color: $dark;
+    box-shadow: 0 0.2rem 0.5rem rgb(102, 102, 102);
+    transition: $transition-default;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 0.5rem 0.7rem rgb(65, 65, 65);
+    }
+
+    &--arrow {
+      position: absolute;
+      top: 0.8rem;
+      right: 2rem;
+      transition: $transition-default;
+    }
+
+    &:hover &--arrow {
+      transform: translateX(1rem);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 0.2rem 0.2rem rgb(102, 102, 102);
+    }
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1.5s linear 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 1.5s linear;
+  animation-fill-mode: forwards;
+}
+
+.fadeInRight {
+  animation: fadeInRight 1.5s linear;
+  animation-fill-mode: forwards;
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s linear;
+  animation-fill-mode: forwards;
+}

@@ -12,6 +12,22 @@
     opacity: 1;
     transform: translateY(0); } }
 
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 *,
 *::after,
 *::before {
@@ -28,22 +44,44 @@ body {
   font-family: "Montserrat", sans-serif; }
 
 .nav {
-  position: absolute;
-  bottom: 2rem;
-  right: 7rem; }
-  .nav__left--title {
-    visibility: hidden; }
-  .nav__right--list {
-    padding: 2rem 0; }
+  position: fixed;
+  padding: 0;
+  background-color: rgba(22, 22, 22, 0.85);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffc760; }
+  .nav--land {
+    position: absolute;
+    bottom: 2rem;
+    background-color: transparent;
+    color: #ff6600; }
+  .nav__left {
+    position: relative;
+    transition: all 250ms ease; }
+    .nav__left:hover :last-child {
+      width: 32rem;
+      left: 2rem; }
+    .nav__left--title {
+      visibility: hidden;
+      color: #f1f1f1;
+      padding: 2rem;
+      font-size: 2.4rem;
+      font-weight: 400; }
+      .nav__left--title a {
+        text-decoration: none;
+        color: inherit; }
   .nav__right--listItem {
     display: inline-block;
-    color: #ff6600;
     font-size: 2.3rem;
     padding: 2rem;
     border-radius: 0.2rem;
-    transition: all 250ms ease; }
+    transition: all 250ms ease;
+    border-bottom: 2px solid transparent; }
     .nav__right--listItem:hover {
-      background-color: rgba(255, 255, 255, 0.3); }
+      background-color: rgba(241, 241, 241, 0.3);
+      border-bottom: 2px solid #ffc760; }
   .nav__right--link {
     list-style: none;
     color: inherit;
@@ -51,47 +89,64 @@ body {
 
 .nav-home {
   opacity: 0;
-  animation: fadeIn 250ms linear 3s;
+  animation: fadeIn 250ms linear 2.4s;
   animation-fill-mode: forwards; }
 
 .nav-about {
   opacity: 0;
-  animation: fadeIn 250ms linear 3.2s;
+  animation: fadeIn 250ms linear 2.6s;
   animation-fill-mode: forwards; }
 
 .nav-services {
   opacity: 0;
-  animation: fadeIn 250ms linear 3.4s;
+  animation: fadeIn 250ms linear 2.8s;
   animation-fill-mode: forwards; }
 
 .nav-resources {
   opacity: 0;
-  animation: fadeIn 250ms linear 3.6s;
+  animation: fadeIn 250ms linear 3s;
   animation-fill-mode: forwards; }
 
 .nav-blog {
   opacity: 0;
-  animation: fadeIn 250ms linear 3.8s;
+  animation: fadeIn 250ms linear 3.2s;
   animation-fill-mode: forwards; }
 
 .nav-contact {
   opacity: 0;
-  animation: fadeIn 250ms linear 4s;
+  animation: fadeIn 250ms linear 3.4s;
   animation-fill-mode: forwards; }
+
+.underline {
+  width: 10rem;
+  visibility: hidden;
+  border-bottom: 2px solid #f1f1f1;
+  position: absolute;
+  left: 13rem;
+  top: 5.7rem;
+  transition: all 500ms ease; }
+
+.active {
+  border-bottom: 2px solid #ffc760;
+  background-color: rgba(241, 241, 241, 0.3); }
+  .active a {
+    cursor: default; }
 
 .landing {
   background-image: linear-gradient(to bottom right, rgba(241, 241, 241, 0.1) 0%, rgba(22, 22, 22, 0.9) 90%), url("../img/family_coaching_solutions.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
   width: 100%; }
   .landing__heading {
     position: absolute;
-    width: 50%;
+    width: 30%;
     top: 30%;
     left: 23%;
     transform: translate(-25%, -25%);
     font-size: 7rem;
+    font-weight: 400;
     color: #f1f1f1;
     letter-spacing: 0.7rem;
     opacity: 0;
@@ -101,11 +156,113 @@ body {
     position: absolute;
     font-weight: 200;
     letter-spacing: 0.7rem;
-    color: #f1ffb0;
+    color: #ffc760;
     top: 60%;
     left: 19%;
     transform: translate(-40%, -25%);
     font-size: 3.5rem;
     opacity: 0;
-    animation: fadeInUp 1.5s linear 1.5s;
+    animation: fadeInUp 1.5s linear 1s;
     animation-fill-mode: forwards; }
+
+.about {
+  padding: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdfcf1; }
+  .about__heading {
+    font-size: 4rem;
+    font-weight: 200;
+    margin-bottom: 5rem;
+    opacity: 0; }
+  .about__spacer {
+    border-bottom: 2px solid #ff6600;
+    width: 10rem;
+    margin-bottom: 10rem;
+    opacity: 0; }
+  .about__cards {
+    display: flex;
+    flex-wrap: wrap; }
+    .about__cards--card {
+      opacity: 0;
+      width: 30rem;
+      display: flex;
+      flex-direction: column; }
+      .about__cards--card:not(:last-child) {
+        margin-right: 4rem; }
+      .about__cards--card h3 {
+        font-size: 2rem;
+        color: #ff6600; }
+      .about__cards--card i {
+        font-size: 5rem;
+        padding: 2rem;
+        color: #161616; }
+      .about__cards--card p {
+        font-size: 1.4rem;
+        line-height: 2.3rem; }
+      .about__cards--card i,
+      .about__cards--card h3 {
+        text-align: center; }
+  .about__sched {
+    padding: 4rem 0;
+    margin-top: 6rem;
+    color: #ff6600;
+    font-size: 2.6rem; }
+  .about__btn {
+    position: relative;
+    padding: 1rem 5rem 1rem 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 2rem;
+    background-color: #ffee00;
+    color: #161616;
+    box-shadow: 0 0.2rem 0.5rem #666666;
+    transition: all 250ms ease; }
+    .about__btn:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 0.5rem 0.7rem #414141; }
+    .about__btn--arrow {
+      position: absolute;
+      top: 0.8rem;
+      right: 2rem;
+      transition: all 250ms ease; }
+    .about__btn:hover .about__btn--arrow {
+      transform: translateX(1rem); }
+    .about__btn:active {
+      transform: translateY(0);
+      box-shadow: 0 0.2rem 0.2rem #666666; }
+
+.fadeIn {
+  animation: fadeIn 1.5s linear 0.5s;
+  animation-fill-mode: forwards; }
+
+.fadeInLeft {
+  animation: fadeInLeft 1.5s linear;
+  animation-fill-mode: forwards; }
+
+.fadeInRight {
+  animation: fadeInRight 1.5s linear;
+  animation-fill-mode: forwards; }
+
+.fadeInUp {
+  animation: fadeInUp 1s linear;
+  animation-fill-mode: forwards; }
+
+.footer__top {
+  height: 40rem; }
+
+.footer__bottom {
+  text-align: right;
+  background-color: #b9b9b9;
+  color: #ffee00; }
+  .footer__bottom p {
+    padding: 2rem;
+    font-size: 1.3rem; }
+    .footer__bottom p a {
+      color: #f1f1f1;
+      transition: all 250ms ease; }
+      .footer__bottom p a:hover {
+        color: #ff6600; }
