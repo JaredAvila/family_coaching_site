@@ -36,7 +36,6 @@
     element: document.getElementById("contact-section"),
     handler: function(direction) {
       if (direction == "down") {
-        console.log("fired");
         document.querySelector(".contact__left").classList.add("fadeInLeft");
         document.querySelector(".contact__right").classList.add("fadeIn");
       }
