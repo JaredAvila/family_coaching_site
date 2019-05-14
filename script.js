@@ -1,8 +1,8 @@
-(() => {
+{
   //************************ navigation waypoint
   const navbar = new Waypoint({
     element: document.getElementById("navbar"),
-    handler: function(direction) {
+    handler: direction => {
       if (direction === "down") {
         document.querySelector(".nav").classList.remove("nav--land");
         document.querySelector(".nav__left--title").style.visibility =
@@ -20,7 +20,7 @@
   //************************ about waypoint
   const section_about = new Waypoint({
     element: document.getElementById("section-about"),
-    handler: function(direction) {
+    handler: direction => {
       if (direction == "down") {
         document.querySelector(".about__heading").classList.add("fadeIn");
         document.querySelector(".about__spacer").classList.add("fadeIn");
@@ -34,7 +34,7 @@
   //************************ contact waypoint
   const section_contact = new Waypoint({
     element: document.getElementById("contact-section"),
-    handler: function(direction) {
+    handler: direction => {
       if (direction == "down") {
         document.querySelector(".contact__left").classList.add("fadeInLeft");
         document.querySelector(".contact__right").classList.add("fadeIn");
@@ -46,4 +46,4 @@
   //******************** current year
   const year = new Date().getFullYear();
   document.getElementById("year").textContent = year;
-})();
+}

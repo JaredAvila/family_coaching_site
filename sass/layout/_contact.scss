@@ -11,6 +11,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
+
+  @include respond(phone) {
+    flex-wrap: wrap-reverse;
+    background-attachment: scroll;
+    background-position: bottom;
+  }
 
   &__left {
     opacity: 0;
@@ -19,12 +26,24 @@
     border-radius: 4px;
     box-shadow: 0 0.3rem 2rem $dark;
 
+    @include respond(phone) {
+      margin: 0;
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+      background-color: $white;
+    }
+
     &--form {
       position: relative;
       display: flex;
       flex-direction: column;
       padding: 9rem 7rem 7rem 7rem;
       font-size: 1.4rem;
+
+      @include respond(phone) {
+        padding: 20rem 7rem 10rem 7rem;
+      }
 
       h3 {
         position: absolute;
@@ -33,6 +52,11 @@
         text-shadow: 0.2rem 0.2rem 0.4rem black;
         top: 3rem;
         left: 13rem;
+
+        @include respond(phone) {
+          left: 16rem;
+          top: 12rem;
+        }
       }
     }
 
@@ -77,6 +101,15 @@
       padding: 4rem 6rem;
       color: $dark;
       font-size: 2rem;
+
+      @include respond(tab-port) {
+        padding: 1rem;
+        font-size: 1.6rem;
+      }
+
+      @include respond(phone) {
+        padding: 15rem 5.5rem;
+      }
     }
   }
 }
