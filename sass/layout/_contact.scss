@@ -21,25 +21,22 @@
 
   &__left {
     opacity: 0;
-    background-color: $light;
-    margin: 5rem;
-    border-radius: 4px;
-    box-shadow: 0 0.3rem 2rem $dark;
+    background-color: #383836;
 
     @include respond(phone) {
       margin: 0;
       width: 100%;
       border-radius: 0;
       box-shadow: none;
-      background-color: $white;
     }
 
     &--form {
       position: relative;
       display: flex;
+      color: $light;
       flex-direction: column;
-      padding: 9rem 7rem 7rem 7rem;
-      font-size: 1.4rem;
+      padding: 15rem 5rem 10rem 5rem;
+      font-size: 1.6rem;
 
       @include respond(phone) {
         padding: 20rem 7rem 10rem 7rem;
@@ -47,11 +44,11 @@
 
       h3 {
         position: absolute;
-        font-size: 2.6rem;
+        font-size: 3.6rem;
         color: orange;
-        text-shadow: 0.2rem 0.2rem 0.4rem black;
-        top: 3rem;
-        left: 13rem;
+        text-shadow: 0.2rem 0.2rem 2rem black;
+        top: 6rem;
+        left: 10rem;
 
         @include respond(phone) {
           left: 16rem;
@@ -62,26 +59,44 @@
 
     &--input,
     &--textarea {
-      margin-bottom: 0.5rem;
-      border: 1px solid $grey;
-      border-radius: 4px;
+      margin-bottom: 2.5rem;
+      border: none;
       outline: none;
       padding: 0.5rem 1rem;
       font-family: inherit;
       font-size: 1.4rem;
+      background-color: transparent;
+      border-bottom: 1px solid $grey;
+
+      &::-webkit-input-placeholder {
+        color: $light;
+      }
+
+      &:placeholder-shown + label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-10rem);
+      }
     }
 
     &--btn {
       padding: 0.7rem;
+      position: relative;
       border: none;
-      box-shadow: 0 0.3rem 0.6rem rgb(100, 100, 100);
+      box-shadow: 0 0.3rem 0.6rem rgb(17, 17, 17);
       background-color: $yellow;
       border-radius: 4px;
       cursor: pointer;
       margin-top: 1.5rem;
-      font-size: 1.6rem;
+      font-size: 2rem;
       outline: none;
       transition: $transition-default;
+
+      i {
+        position: absolute;
+        top: 0.6rem;
+        right: 10rem;
+      }
 
       &:active {
         transform: translateY(0.2rem);
@@ -111,5 +126,17 @@
         padding: 15rem 5.5rem;
       }
     }
+  }
+}
+
+.input_field {
+  display: flex;
+
+  label {
+    transition: all 300ms ease;
+  }
+
+  i {
+    padding-right: 2rem;
   }
 }

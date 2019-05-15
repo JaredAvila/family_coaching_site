@@ -31,20 +31,20 @@
       </div>
       <div class="nav__right">
         <ul class="nav__right--list">
-          <li class="nav__right--listItem nav-home">
-            <a href="#" class="nav__right--link">Home</a>
+          <li class="nav__right--listItem">
+            <a href="#" class="nav__right--link nav-home">Home</a>
           </li>
-          <li class="nav__right--listItem nav-about">
-            <a href="#" class="nav__right--link">About</a>
+          <li class="nav__right--listItem">
+            <a href="#" class="nav__right--link nav-about">About</a>
           </li>
-          <li class="nav__right--listItem nav-services">
-            <a href="#" class="nav__right--link">Services</a>
+          <li class="nav__right--listItem">
+            <a href="#" class="nav__right--link nav-services">Services</a>
           </li>
-          <li class="nav__right--listItem nav-resources">
-            <a href="#" class="nav__right--link">Resources</a>
+          <li class="nav__right--listItem">
+            <a href="#" class="nav__right--link nav-resources">Resources</a>
           </li>
-          <li class="nav__right--listItem nav-blog">
-            <a href="#" class="nav__right--link">Blog</a>
+          <li class="nav__right--listItem">
+            <a href="#" class="nav__right--link nav-blog">Blog</a>
           </li>
           <li class="nav__right--listItem">
             <a href="#" class="nav__right--link nav-contact">Contact</a>
@@ -128,13 +128,31 @@
         <div class="contact__left">
           <form class="contact__left--form">
             <h3>Let's talk</h3>
-            <label for="name">Full Name</label>
-            <input class="contact__left--input" type="text" name="name">
-            <label for="email">Email</label>
-            <input class="contact__left--input" type="text" name="email">
-            <label for="message">Message</label>
-            <textarea class="contact__left--textarea" name="message" id="" cols="30" rows="10"></textarea>
-            <button class="contact__left--btn" type="button">Connect</button>
+            
+            <div class="input_field">
+                <i class="material-icons">
+                    account_box
+                    </i>
+              <input class="contact__left--input" placeholder="Name" type="text" name="name">
+              <label for="name" class="name_label">Name</label>
+            </div>
+            <div class="input_field">
+                <i class="material-icons">
+                    email
+                    </i>
+              <input class="contact__left--input" type="text" name="email" placeholder="Email">
+              <label for="email" class="email_label">Email</label>
+            </div>
+            <div class="input_field">
+                <i class="material-icons textarea-icon">
+                    question_answer
+                    </i>
+                <textarea class="contact__left--textarea" name="message" cols="30" rows="1" placeholder="Message"></textarea>
+                <label for="message" class="message_label">Message</label>
+            </div>
+            <button class="contact__left--btn" type="button">Connect <i class="material-icons">
+                send
+                </i></button>
           </form>
         </div>
         <div class="contact__right">
