@@ -471,7 +471,8 @@ body {
       font-family: inherit;
       font-size: 1.4rem;
       background-color: transparent;
-      border-bottom: 1px solid #b9b9b9; }
+      border-bottom: 1px solid #b9b9b9;
+      color: #ffc760; }
       .contact__left--input::-webkit-input-placeholder, .contact__left--textarea::-webkit-input-placeholder {
         color: #f1f1f1; }
       .contact__left--input:placeholder-shown + label, .contact__left--textarea:placeholder-shown + label {
