@@ -1,12 +1,19 @@
+//**********************First site start
+
 //base styles
-@import "./base/variables";
+// @import "./base/variables";
 @import "./base/mixins";
-@import "./base/animations";
+// @import "./base/animations";
 @import "./base/base";
 
-//layout styles
-@import "./layout/navbar";
-@import "./layout/landing";
-@import "./layout/about";
-@import "./layout/footer";
-@import "./layout/contact";
+// //layout styles
+// @import "./layout/navbar";
+// @import "./layout/landing";
+// @import "./layout/about";
+// @import "./layout/footer";
+// @import "./layout/contact";
+
+// ************************** First site end
+
+@import "./site-two/variables";
+@import "./site-two/main";
