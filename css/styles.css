@@ -1,3 +1,49 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.fadeIn {
+  animation: fadeIn 1.5s linear 0.5s;
+  animation-fill-mode: forwards; }
+
+.fadeInLeft {
+  animation: fadeInLeft 1.5s linear;
+  animation-fill-mode: forwards; }
+
+.fadeInRight {
+  animation: fadeInRight 1.5s linear;
+  animation-fill-mode: forwards; }
+
+.fadeInUp {
+  animation: fadeInUp 1s linear;
+  animation-fill-mode: forwards; }
+
 *,
 *::after,
 *::before {
@@ -25,7 +71,8 @@ body {
 .header {
   position: relative;
   color: #222222;
-  cursor: default; }
+  cursor: default;
+  animation: fadeIn 1s ease-in; }
   .header__logo {
     position: absolute;
     top: 0;
@@ -68,7 +115,7 @@ body {
         border-bottom: 1px solid #f6fef7; }
   .header__showcase {
     position: relative;
-    background-image: linear-gradient(rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.5)), url("../img/family_coaching_solutions_contact.jpg");
+    background-image: linear-gradient(rgba(212, 66, 6, 0.7) 0%, rgba(34, 34, 34, 0.7) 70%), url("../img/family_coaching_solutions_contact.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -78,9 +125,10 @@ body {
     width: 100%; }
     .header__showcase--container {
       position: absolute;
-      top: 50%;
+      top: 40%;
       left: 10%;
-      transform: translateY(-50%); }
+      opacity: 0;
+      animation: fadeInLeft 1.5s ease 1s forwards; }
     .header__showcase--main {
       color: #f6fef7;
       font-size: 6rem;
@@ -101,8 +149,10 @@ body {
       font-size: 1.4rem;
       border-radius: 2px;
       box-shadow: 0 0.2rem 2rem #222222;
-      transition: all 250ms ease; }
+      transition: all 250ms ease;
+      opacity: 0;
+      animation: fadeIn 1.5s ease 2.5s forwards; }
       .header__showcase--btn:hover {
         background-color: #15b1d7; }
       .header__showcase--btn:active {
-        background-color: #03749c; }
+        background-color: #023d67; }
