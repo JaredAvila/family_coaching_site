@@ -97,6 +97,11 @@
         position: absolute;
         top: 0.6rem;
         right: 10rem;
+
+        @include respond(phone) {
+          top: 0.4rem;
+          right: 7rem;
+        }
       }
 
       &:active {
