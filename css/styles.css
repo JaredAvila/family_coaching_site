@@ -68,91 +68,458 @@ body {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif; }
 
-.header {
-  position: relative;
-  color: #222222;
-  cursor: default;
-  animation: fadeIn 1s ease-in; }
-  .header__logo {
+.nav {
+  position: fixed;
+  padding: 0;
+  background-color: rgba(22, 22, 22, 0.85);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffc760;
+  z-index: 100; }
+  .nav--land {
     position: absolute;
-    top: 0;
-    left: 0;
-    padding: 1rem 2.5rem;
-    z-index: 21;
-    display: flex;
-    flex-flow: row-reverse; }
-    .header__logo--title {
-      color: #f6fef7;
-      padding: 1rem;
-      letter-spacing: 0.2rem; }
-    .header__logo--img {
-      width: 4.5rem;
-      cursor: pointer; }
-  .header__nav {
-    position: fixed;
-    height: 6.1rem;
-    width: 100vw;
-    z-index: 20;
-    background-color: rgba(21, 177, 215, 0.8); }
-    .header__nav--list {
-      list-style: none;
-      position: absolute;
-      top: 2.1rem;
-      right: 0; }
-    .header__nav--item {
-      display: inline-block; }
-    .header__nav--link {
-      text-decoration: none;
-      font: inherit;
-      color: #222222;
-      font-size: 1.4rem;
-      padding: 2.1rem;
-      border-bottom: 1px solid transparent;
-      transition: all 250ms ease; }
-      .header__nav--link--active, .header__nav--link:hover {
-        background-color: #03749c;
-        color: #f6fef7;
-        border-bottom: 1px solid #f6fef7; }
-  .header__showcase {
+    bottom: 2rem;
+    background-color: transparent;
+    color: #ff6600; }
+  .nav__left {
     position: relative;
-    background-image: linear-gradient(rgba(212, 66, 6, 0.7) 0%, rgba(34, 34, 34, 0.7) 70%), url("../img/family_coaching_solutions_contact.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    transition: all 250ms ease; }
+    @media (max-width: 37.5em) {
+      .nav__left {
+        display: none; } }
+    .nav__left:hover :last-child {
+      width: 32rem;
+      left: 2rem; }
+    .nav__left--title {
+      visibility: hidden;
+      color: #f1f1f1;
+      padding: 2rem;
+      font-size: 2.4rem;
+      font-weight: 400; }
+      @media (max-width: 75em) {
+        .nav__left--title {
+          padding: 1rem;
+          font-size: 2rem;
+          font-weight: 400; } }
+      @media (max-width: 56.25em) {
+        .nav__left--title {
+          font-size: 1.6rem;
+          padding: 0.8rem; } }
+      .nav__left--title a {
+        text-decoration: none;
+        color: inherit; }
+  @media (max-width: 37.5em) {
+    .nav__right {
+      margin: auto; } }
+  .nav__right--listItem {
+    display: inline-block; }
+    @media (max-width: 75em) {
+      .nav__right--listItem {
+        font-size: 2rem;
+        padding: 1rem; } }
+    @media (max-width: 56.25em) {
+      .nav__right--listItem {
+        padding: 1.3rem;
+        font-size: 1.6rem; } }
+    @media (max-width: 37.5em) {
+      .nav__right--listItem {
+        padding: 1rem;
+        font-size: 1.3rem; } }
+  .nav__right--link {
+    font-size: 2.3rem;
+    padding: 2rem;
+    border-radius: 0.2rem;
+    transition: all 250ms ease;
+    border-bottom: 2px solid transparent;
+    list-style: none;
+    color: inherit;
+    text-decoration: none; }
+    .nav__right--link:hover {
+      background-color: rgba(241, 241, 241, 0.3);
+      border-bottom: 2px solid #ffc760; }
+    @media (max-width: 75em) {
+      .nav__right--link {
+        font-size: 2rem;
+        padding: 1rem; } }
+    @media (max-width: 56.25em) {
+      .nav__right--link {
+        padding: 1.3rem;
+        font-size: 1.6rem; } }
+    @media (max-width: 37.5em) {
+      .nav__right--link {
+        padding: 1rem 0;
+        font-size: 1.3rem; } }
+
+.nav-home {
+  opacity: 0;
+  animation: fadeIn 250ms linear 2.4s;
+  animation-fill-mode: forwards; }
+
+.nav-about {
+  opacity: 0;
+  animation: fadeIn 250ms linear 2.6s;
+  animation-fill-mode: forwards; }
+
+.nav-services {
+  opacity: 0;
+  animation: fadeIn 250ms linear 2.8s;
+  animation-fill-mode: forwards; }
+
+.nav-resources {
+  opacity: 0;
+  animation: fadeIn 250ms linear 3s;
+  animation-fill-mode: forwards; }
+
+.nav-blog {
+  opacity: 0;
+  animation: fadeIn 250ms linear 3.2s;
+  animation-fill-mode: forwards; }
+
+.nav-contact {
+  opacity: 0;
+  animation: fadeIn 250ms linear 3.4s;
+  animation-fill-mode: forwards; }
+
+.underline {
+  width: 10rem;
+  visibility: hidden;
+  border-bottom: 2px solid #f1f1f1;
+  position: absolute;
+  left: 13rem;
+  top: 5.7rem;
+  transition: all 500ms ease; }
+  @media (max-width: 75em) {
+    .underline {
+      display: none; } }
+
+.active {
+  border-bottom: 2px solid #ffc760;
+  background-color: rgba(241, 241, 241, 0.3); }
+  .active a {
+    cursor: default; }
+
+.landing {
+  background-image: linear-gradient(to bottom right, rgba(241, 241, 241, 0.1) 0%, rgba(22, 22, 22, 0.9) 90%), url("../img/family_coaching_solutions.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  width: 100%; }
+  .landing__heading {
+    position: absolute;
+    width: 30%;
+    top: 30%;
+    left: 23%;
+    transform: translate(-25%, -25%);
+    font-size: 7rem;
+    font-weight: 400;
+    color: #f1f1f1;
+    letter-spacing: 0.7rem;
+    opacity: 0;
+    animation: fadeIn 2s linear 0.5s;
+    animation-fill-mode: forwards; }
+    @media (max-width: 56.25em) {
+      .landing__heading {
+        font-size: 5rem; } }
+    @media (max-width: 37.5em) {
+      .landing__heading {
+        font-size: 4rem;
+        top: 33%;
+        left: 26%;
+        width: 60%; } }
+  .landing__sub-heading {
+    position: absolute;
+    font-weight: 200;
+    letter-spacing: 0.7rem;
+    color: #ffc760;
+    top: 60%;
+    left: 19%;
+    transform: translate(-40%, -25%);
+    font-size: 3.5rem;
+    opacity: 0;
+    animation: fadeInUp 1.5s linear 1s;
+    animation-fill-mode: forwards; }
+    @media (max-width: 56.25em) {
+      .landing__sub-heading {
+        font-size: 3rem; } }
+    @media (max-width: 37.5em) {
+      .landing__sub-heading {
+        font-size: 1.8rem;
+        top: 65%;
+        left: 10%; } }
+
+.about {
+  padding: 20rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdfcf1; }
+  @media (max-width: 56.25em) {
+    .about {
+      padding: 15rem 2rem; } }
+  .about__heading {
+    font-size: 4rem;
+    font-weight: 200;
+    margin-bottom: 5rem;
+    opacity: 0; }
+    @media (max-width: 56.25em) {
+      .about__heading {
+        font-size: 3rem; } }
+    @media (max-width: 37.5em) {
+      .about__heading {
+        font-size: 2.8rem;
+        font-weight: 400;
+        text-align: center; } }
+  .about__spacer {
+    border-bottom: 2px solid #ff6600;
+    width: 10rem;
+    margin-bottom: 10rem;
+    opacity: 0; }
+    @media (max-width: 37.5em) {
+      .about__spacer {
+        margin-bottom: 6rem; } }
+  .about__cards {
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    height: 100vh;
-    width: 100%; }
-    .header__showcase--container {
+    flex-wrap: wrap; }
+    .about__cards--card {
+      opacity: 0;
+      width: 30rem;
+      display: flex;
+      flex-direction: column; }
+      @media (max-width: 56.25em) {
+        .about__cards--card {
+          width: 20rem; } }
+      @media (max-width: 37.5em) {
+        .about__cards--card {
+          width: 100%;
+          align-items: center;
+          margin-bottom: 5rem; } }
+      .about__cards--card:not(:last-child) {
+        margin-right: 4rem; }
+        @media (max-width: 37.5em) {
+          .about__cards--card:not(:last-child) {
+            margin-right: 0; } }
+      .about__cards--card h3 {
+        font-size: 2rem;
+        color: #ff6600; }
+        @media (max-width: 56.25em) {
+          .about__cards--card h3 {
+            font-size: 1.4rem; } }
+      .about__cards--card i {
+        font-size: 5rem;
+        padding: 2rem;
+        color: #161616; }
+      .about__cards--card p {
+        font-size: 1.4rem;
+        line-height: 2.3rem; }
+        @media (max-width: 56.25em) {
+          .about__cards--card p {
+            font-size: 1.2rem; } }
+      .about__cards--card i,
+      .about__cards--card h3 {
+        text-align: center; }
+  .about__sched {
+    padding: 4rem 0;
+    margin-top: 6rem;
+    color: #ff6600;
+    font-size: 2.6rem;
+    font-weight: 400; }
+    @media (max-width: 56.25em) {
+      .about__sched {
+        font-size: 2rem; } }
+    @media (max-width: 37.5em) {
+      .about__sched {
+        font-size: 1.6rem;
+        text-align: center;
+        margin-top: 0; } }
+  .about__btn {
+    position: relative;
+    padding: 1rem 5rem 1rem 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 2rem;
+    background-color: #ffee00;
+    color: #161616;
+    box-shadow: 0 0.2rem 0.5rem #666666;
+    transition: all 250ms ease; }
+    .about__btn:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 0.5rem 0.7rem #414141; }
+    @media (max-width: 56.25em) {
+      .about__btn {
+        padding: 0.5rem 3rem 0.5rem 0.5rem;
+        font-size: 1.5rem; } }
+    .about__btn--arrow {
       position: absolute;
-      top: 40%;
-      left: 10%;
-      opacity: 0;
-      animation: fadeInLeft 1.5s ease 1s forwards; }
-    .header__showcase--main {
-      color: #f6fef7;
-      font-size: 6rem;
-      font-weight: 200;
-      margin-bottom: 5rem; }
-    .header__showcase--sub {
-      color: #5cd4ef;
-      font-size: 3rem;
-      letter-spacing: 0.6rem;
-      margin-bottom: 10rem;
-      padding-left: 50rem; }
-    .header__showcase--btn {
-      padding: 1.5rem 2.5rem;
-      background-color: #03749c;
-      width: fit-content;
-      text-decoration: none;
-      color: #f6fef7;
+      top: 0.8rem;
+      right: 2rem;
+      transition: all 250ms ease; }
+      @media (max-width: 56.25em) {
+        .about__btn--arrow {
+          top: 0.4rem;
+          right: 1.2rem; } }
+    .about__btn:hover .about__btn--arrow {
+      transform: translateX(1rem); }
+    .about__btn:active {
+      transform: translateY(0);
+      box-shadow: 0 0.2rem 0.2rem #666666; }
+
+.footer {
+  font-size: 1.4rem; }
+  .footer__top {
+    color: #161616;
+    background-color: #f1f1f1;
+    padding: 10rem 5rem;
+    display: flex;
+    justify-content: space-evenly; }
+    @media (max-width: 56.25em) {
+      .footer__top {
+        padding: 5rem; } }
+    @media (max-width: 37.5em) {
+      .footer__top--left {
+        width: 60%; } }
+    .footer__top--left > * {
+      padding: 0.2rem 0; }
+    .footer__top--left h1 {
+      margin-bottom: 1rem;
+      font-size: 3.5rem; }
+      @media (max-width: 56.25em) {
+        .footer__top--left h1 {
+          font-size: 2.5rem; } }
+      @media (max-width: 37.5em) {
+        .footer__top--left h1 {
+          font-size: 2rem; } }
+    .footer__top--right p {
+      margin-bottom: 2rem;
+      font-size: 1.8rem; }
+    .footer__top--right ul {
+      list-style: none; }
+      .footer__top--right ul li {
+        padding: 0.5rem 0;
+        font-size: 1.4rem; }
+        .footer__top--right ul li a {
+          color: #ff6600;
+          transition: all 250ms ease; }
+          .footer__top--right ul li a:hover {
+            color: #161616; }
+  .footer__bottom {
+    text-align: right;
+    background-color: #b9b9b9;
+    color: #ffee00; }
+    .footer__bottom p {
+      padding: 2rem; }
+      .footer__bottom p a {
+        color: #f1f1f1;
+        transition: all 250ms ease; }
+        .footer__bottom p a:hover {
+          color: #ff6600; }
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(to right top, rgba(241, 241, 241, 0.801), rgba(255, 102, 0, 0.801)), url("../img/family_coaching_solutions_contact.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; }
+  @media (max-width: 37.5em) {
+    .contact {
+      flex-wrap: wrap-reverse;
+      background-attachment: scroll;
+      background-position: bottom; } }
+  .contact__left {
+    opacity: 0;
+    background-color: #383836; }
+    @media (max-width: 37.5em) {
+      .contact__left {
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none; } }
+    .contact__left--form {
+      position: relative;
+      display: flex;
+      color: #f1f1f1;
+      flex-direction: column;
+      padding: 15rem 5rem 10rem 5rem;
+      font-size: 1.6rem; }
+      @media (max-width: 37.5em) {
+        .contact__left--form {
+          padding: 20rem 7rem 10rem 7rem; } }
+      .contact__left--form h3 {
+        position: absolute;
+        font-size: 3.6rem;
+        color: orange;
+        text-shadow: 0.2rem 0.2rem 2rem black;
+        top: 6rem;
+        left: 10rem; }
+        @media (max-width: 37.5em) {
+          .contact__left--form h3 {
+            left: 16rem;
+            top: 12rem; } }
+    .contact__left--input, .contact__left--textarea {
+      margin-bottom: 2.5rem;
+      border: none;
+      outline: none;
+      padding: 0.5rem 1rem;
+      font-family: inherit;
       font-size: 1.4rem;
-      border-radius: 2px;
-      box-shadow: 0 0.2rem 2rem #222222;
-      transition: all 250ms ease;
-      opacity: 0;
-      animation: fadeIn 1.5s ease 2.5s forwards; }
-      .header__showcase--btn:hover {
-        background-color: #15b1d7; }
-      .header__showcase--btn:active {
-        background-color: #023d67; }
+      background-color: transparent;
+      border-bottom: 1px solid #b9b9b9;
+      color: #ffc760; }
+      .contact__left--input::-webkit-input-placeholder, .contact__left--textarea::-webkit-input-placeholder {
+        color: #f1f1f1; }
+      .contact__left--input:placeholder-shown + label, .contact__left--textarea:placeholder-shown + label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-10rem); }
+    .contact__left--btn {
+      padding: 0.7rem;
+      position: relative;
+      border: none;
+      box-shadow: 0 0.3rem 0.6rem #111111;
+      background-color: #ffee00;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      font-size: 2rem;
+      outline: none;
+      transition: all 250ms ease; }
+      .contact__left--btn i {
+        position: absolute;
+        top: 0.6rem;
+        right: 10rem; }
+      .contact__left--btn:active {
+        transform: translateY(0.2rem);
+        box-shadow: 0 0.1rem 0.3rem #4d4d4d; }
+  .contact__right {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 3.3rem;
+    font-weight: bold; }
+    .contact__right--para {
+      padding: 4rem 6rem;
+      color: #161616;
+      font-size: 2rem; }
+      @media (max-width: 56.25em) {
+        .contact__right--para {
+          padding: 1rem;
+          font-size: 1.6rem; } }
+      @media (max-width: 37.5em) {
+        .contact__right--para {
+          padding: 15rem 5.5rem; } }
+
+.input_field {
+  display: flex; }
+  .input_field label {
+    transition: all 300ms ease; }
+  .input_field i {
+    padding-right: 2rem; }
