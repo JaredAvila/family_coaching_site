@@ -17,6 +17,7 @@
   <body>
     <header class="header">
       <div class="header__logo">
+        <h1 class="header__logo--title">Family Coaching Solutions</h1>
         <a href="/"
           ><img class="header__logo--img" src="./img/favicon.png" alt=""
         /></a>
@@ -24,13 +25,15 @@
       <nav class="header__nav">
         <ul class="header__nav--list">
           <li class="header__nav--item">
+            <a class="header__nav--link header__nav--link--active" href="/"
+              >Home</a
+            >
+          </li>
+          <li class="header__nav--item">
             <a class="header__nav--link" href="/">About</a>
           </li>
           <li class="header__nav--item">
             <a class="header__nav--link" href="/">Services</a>
-          </li>
-          <li class="header__nav--item">
-            <a class="header__nav--link" href="/">Resources</a>
           </li>
           <li class="header__nav--item">
             <a class="header__nav--link" href="/">Blog</a>
@@ -41,9 +44,11 @@
         </ul>
       </nav>
       <div class="header__showcase">
-        <h1 class="header__showcase--main">Building New Beginings</h1>
-        <h3 class="header__showcase--sub">One step at a time</h3>
-        <a class="header__showcase--btn" href="/">Learn More</a>
+        <div class="header__showcase--container">
+          <h1 class="header__showcase--main">Building New Beginings</h1>
+          <h3 class="header__showcase--sub">One step at a time</h3>
+          <a class="header__showcase--btn" href="/">Learn More</a>
+        </div>
       </div>
     </header>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>

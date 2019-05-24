@@ -1,13 +1,22 @@
 .header {
   position: relative;
   color: $color-dark;
+  cursor: default;
 
   &__logo {
     position: absolute;
     top: 0;
     left: 0;
     padding: 1rem 2.5rem;
-    z-index: 1;
+    z-index: 21;
+    display: flex;
+    flex-flow: row-reverse;
+
+    &--title {
+      color: $color-light;
+      padding: 1rem;
+      letter-spacing: 0.2rem;
+    }
 
     &--img {
       width: 4.5rem;
@@ -18,7 +27,8 @@
     position: fixed;
     height: 6.1rem;
     width: 100vw;
-    background-color: $color-blue;
+    z-index: 20;
+    background-color: rgba($color-blue, 0.8);
 
     &--list {
       list-style: none;
@@ -32,6 +42,7 @@
     &--link {
       text-decoration: none;
       font: inherit;
+      color: $color-dark;
       font-size: 1.4rem;
       padding: 2.1rem;
       border-bottom: 1px solid transparent;
@@ -46,18 +57,58 @@
     }
   }
   &__showcase {
+    position: relative;
+    background-image: linear-gradient(
+        rgba($color-dark, 0.5),
+        rgba($color-dark, 0.5)
+      ),
+      url("../img/family_coaching_solutions_contact.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     width: 100%;
 
+    &--container {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+    }
+
     &--main {
+      color: $color-light;
+      font-size: 6rem;
+      font-weight: 200;
+      margin-bottom: 5rem;
     }
     &--sub {
+      color: $color-blue-light;
+      font-size: 3rem;
+      letter-spacing: 0.6rem;
+      margin-bottom: 10rem;
+      padding-left: 50rem;
     }
     &--btn {
+      padding: 1.5rem 2.5rem;
+      background-color: $color-blue-dark;
+      width: fit-content;
+      text-decoration: none;
+      color: $color-light;
+      font-size: 1.4rem;
+      border-radius: 2px;
+      box-shadow: 0 0.2rem 2rem $color-dark;
+      transition: $transition-default;
+
+      &:hover {
+        background-color: $color-blue;
+      }
+
+      &:active {
+        background-color: $color-blue-dark;
+      }
     }
   }
 }
