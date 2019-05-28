@@ -3,10 +3,10 @@
   justify-content: space-between;
   background-image: linear-gradient(
       to right top,
-      rgba($light, 0.801),
-      rgba($orange, 0.801)
+      rgba($color-light, 0.801),
+      rgba($color-blue, 0.801)
     ),
-    url("../img/family_coaching_solutions_contact.jpg");
+    url("../img/family-coaching-solutions.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,7 +16,7 @@
   @include respond(phone) {
     flex-wrap: wrap-reverse;
     background-attachment: scroll;
-    background-position: bottom;
+    background-position: bottom center;
   }
 
   &__left {
@@ -33,7 +33,7 @@
     &--form {
       position: relative;
       display: flex;
-      color: $light;
+      color: $color-light;
       flex-direction: column;
       padding: 15rem 5rem 10rem 5rem;
       font-size: 1.6rem;
@@ -45,7 +45,7 @@
       h3 {
         position: absolute;
         font-size: 3.6rem;
-        color: orange;
+        color: $color-blue-dark;
         text-shadow: 0.2rem 0.2rem 2rem black;
         top: 6rem;
         left: 10rem;
@@ -66,11 +66,11 @@
       font-family: inherit;
       font-size: 1.4rem;
       background-color: transparent;
-      border-bottom: 1px solid $grey;
-      color: $orange-light;
+      border-bottom: 1px solid $color-light;
+      color: $color-blue;
 
       &::-webkit-input-placeholder {
-        color: $light;
+        color: $color-light;
       }
 
       &:placeholder-shown + label {
@@ -85,7 +85,7 @@
       position: relative;
       border: none;
       box-shadow: 0 0.3rem 0.6rem rgb(17, 17, 17);
-      background-color: $yellow;
+      background-color: $color-yellow;
       border-radius: 4px;
       cursor: pointer;
       margin-top: 1.5rem;
@@ -93,10 +93,20 @@
       outline: none;
       transition: $transition-default;
 
+      &:hover i {
+        right: 8rem;
+
+        @include respond(phone) {
+          right: 6rem;
+        }
+      }
+
       i {
         position: absolute;
         top: 0.6rem;
         right: 10rem;
+        color: $color-blue-dark;
+        transition: all 250ms ease;
 
         @include respond(phone) {
           top: 0.4rem;
@@ -120,7 +130,7 @@
     font-weight: bold;
     &--para {
       padding: 4rem 6rem;
-      color: $dark;
+      color: $color-dark;
       font-size: 2rem;
 
       @include respond(tab-port) {
@@ -140,9 +150,11 @@
 
   label {
     transition: all 300ms ease;
+    color: $color-yellow;
   }
 
   i {
     padding-right: 2rem;
+    color: $color-blue;
   }
 }

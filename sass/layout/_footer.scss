@@ -1,8 +1,8 @@
 .footer {
   font-size: 1.4rem;
   &__top {
-    color: $dark;
-    background-color: $light;
+    color: $color-dark;
+    background-color: $color-light;
     padding: 10rem 5rem;
     display: flex;
     justify-content: space-evenly;
@@ -48,11 +48,11 @@
           font-size: 1.4rem;
 
           a {
-            color: $orange;
+            color: $color-blue-dark;
             transition: $transition-default;
 
             &:hover {
-              color: $dark;
+              color: $color-blue;
             }
           }
         }
@@ -62,17 +62,17 @@
 
   &__bottom {
     text-align: right;
-    background-color: $grey;
-    color: $yellow;
+    background-color: $color-dark;
+    color: $color-blue-dark;
     p {
       padding: 2rem;
 
       a {
-        color: $light;
+        color: $color-blue;
         transition: $transition-default;
 
         &:hover {
-          color: $orange;
+          color: $color-yellow;
         }
       }
     }

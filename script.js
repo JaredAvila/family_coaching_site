@@ -1,22 +1,4 @@
 {
-  //************************ navigation waypoint
-  const navbar = new Waypoint({
-    element: document.getElementById("navbar"),
-    handler: direction => {
-      if (direction === "down") {
-        document.querySelector(".nav").classList.remove("nav--land");
-        document.querySelector(".nav__left--title").style.visibility =
-          "visible";
-        document.querySelector(".underline").style.visibility = "visible";
-        document.querySelector(".nav-home").classList.add("active");
-      } else if (direction === "up") {
-        document.querySelector(".nav").classList.add("nav--land");
-        document.querySelector(".underline").style.visibility = "hidden";
-        document.querySelector(".nav__left--title").style.visibility = "hidden";
-        document.querySelector(".nav-home").classList.remove("active");
-      }
-    }
-  });
   //************************ about waypoint
   const section_about = new Waypoint({
     element: document.getElementById("section-about"),

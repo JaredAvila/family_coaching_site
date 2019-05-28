@@ -1,10 +1,10 @@
 .about {
-  padding: 20rem 0;
+  padding-top: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $white;
+  background-color: $color-light;
 
   @include respond(tab-port) {
     padding: 15rem 2rem;
@@ -28,7 +28,7 @@
   }
 
   &__spacer {
-    border-bottom: 2px solid $orange;
+    border-bottom: 3px solid $color-yellow;
     width: 10rem;
     margin-bottom: 10rem;
     opacity: 0;
@@ -41,6 +41,7 @@
   &__cards {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 9rem;
 
     &--card {
       opacity: 0;
@@ -66,7 +67,7 @@
 
       h3 {
         font-size: 2rem;
-        color: $orange;
+        color: $color-blue-dark;
 
         @include respond(tab-port) {
           font-size: 1.4rem;
@@ -76,7 +77,7 @@
       i {
         font-size: 5rem;
         padding: 2rem;
-        color: $dark;
+        color: $color-dark;
       }
 
       p {
@@ -98,7 +99,7 @@
   &__sched {
     padding: 4rem 0;
     margin-top: 6rem;
-    color: $orange;
+    color: $color-light;
     font-size: 2.6rem;
     font-weight: 400;
 
@@ -113,6 +114,14 @@
     }
   }
 
+  &__schedule {
+    margin-top: 10rem;
+    width: 100%;
+    padding: 9rem 15rem 20rem 15rem;
+    background-color: $color-blue-dark;
+    text-align: center;
+  }
+
   &__btn {
     position: relative;
     padding: 1rem 5rem 1rem 1.5rem;
@@ -120,8 +129,8 @@
     cursor: pointer;
     border-radius: 4px;
     font-size: 2rem;
-    background-color: $yellow;
-    color: $dark;
+    background-color: $color-yellow;
+    color: $color-dark;
     box-shadow: 0 0.2rem 0.5rem rgb(102, 102, 102);
     transition: $transition-default;
 
