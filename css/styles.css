@@ -168,7 +168,7 @@ body {
   background-color: #ebebeb; }
   @media (max-width: 56.25em) {
     .about {
-      padding: 15rem 2rem; } }
+      padding: 15rem 0 0 0; } }
   .about__heading {
     font-size: 4rem;
     font-weight: 200;
@@ -206,7 +206,8 @@ body {
         .about__cards--card {
           width: 100%;
           align-items: center;
-          margin-bottom: 5rem; } }
+          margin-bottom: 5rem;
+          padding: 0 2rem; } }
       .about__cards--card:not(:last-child) {
         margin-right: 4rem; }
         @media (max-width: 37.5em) {
@@ -217,7 +218,7 @@ body {
         color: #22888b; }
         @media (max-width: 56.25em) {
           .about__cards--card h3 {
-            font-size: 1.4rem; } }
+            font-size: 2.4rem; } }
       .about__cards--card i {
         font-size: 5rem;
         padding: 2rem;
@@ -227,7 +228,7 @@ body {
         line-height: 2.3rem; }
         @media (max-width: 56.25em) {
           .about__cards--card p {
-            font-size: 1.2rem; } }
+            font-size: 1.8rem; } }
       .about__cards--card i,
       .about__cards--card h3 {
         text-align: center; }
@@ -242,7 +243,7 @@ body {
         font-size: 2rem; } }
     @media (max-width: 37.5em) {
       .about__sched {
-        font-size: 1.6rem;
+        font-size: 2.6rem;
         text-align: center;
         margin-top: 0; } }
   .about__schedule {
@@ -251,6 +252,9 @@ body {
     padding: 9rem 15rem 20rem 15rem;
     background-color: #22888b;
     text-align: center; }
+    @media (max-width: 37.5em) {
+      .about__schedule {
+        padding: 9rem 2rem 20rem 2rem; } }
   .about__btn {
     position: relative;
     padding: 1rem 5rem 1rem 1.5rem;
@@ -267,8 +271,8 @@ body {
       box-shadow: 0 0.5rem 0.7rem #414141; }
     @media (max-width: 56.25em) {
       .about__btn {
-        padding: 0.5rem 3rem 0.5rem 0.5rem;
-        font-size: 1.5rem; } }
+        padding: 2rem 5rem 2rem 3rem;
+        font-size: 2rem; } }
     .about__btn--arrow {
       position: absolute;
       top: 0.8rem;
@@ -276,8 +280,8 @@ body {
       transition: all 250ms ease; }
       @media (max-width: 56.25em) {
         .about__btn--arrow {
-          top: 0.4rem;
-          right: 1.2rem; } }
+          top: 1.6rem;
+          right: 2.2rem; } }
     .about__btn:hover .about__btn--arrow {
       transform: translateX(1rem); }
     .about__btn:active {
@@ -413,10 +417,16 @@ body {
             right: 6rem; } }
       .contact__left--btn i {
         position: absolute;
-        top: 0.6rem;
+        top: 0.7rem;
         right: 10rem;
         color: #22888b;
         transition: all 250ms ease; }
+        @media (max-width: 75em) {
+          .contact__left--btn i {
+            top: 0.6rem; } }
+        @media (max-width: 56.25em) {
+          .contact__left--btn i {
+            top: 0.4rem; } }
         @media (max-width: 37.5em) {
           .contact__left--btn i {
             top: 0.4rem;
